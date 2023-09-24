@@ -1,0 +1,31 @@
+#background {
+    position: fixed;
+    inset: 0; /*Isso define as distâncias da borda esquerda, superior, direita e inferior do elemento em relação ao seu elemento pai.*/
+    z-index: -1; /* designei o fundo para trás */
+    width: 100%;
+    height: 100vh; /* altura da janela de visualização significa que o elemento terá uma altura igual à altura atual da janela do navegador*/
+}
+
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fará com o que o video dimensione para todo o container a partir da tela, podendo ter até alguns cortes no arquivo*/
+}
+
+#background::after{
+    content: '';
+    position: fixed;
+    width: inherit; /* largura do pai */
+    height: inherit; /* altura do pai */
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 100%);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh; 
+}
